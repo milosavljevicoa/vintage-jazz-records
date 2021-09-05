@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "bf68f266-3b07-4116-9083-372e395f48d1",
+		"name": "vintage-jazz-records",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get single album",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sensorType\": \"android-game-sensor\",\r\n    \"readingAndSendingIntervalTimeInSeconds\": 6400,\r\n    \"threshold\": 25\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/albums/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"albums",
+						"1"
+					]
+				},
+				"description": "Get single instance of an album"
+			},
+			"response": [
+				{
+					"name": "Get single album 1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sensorType\": \"android-game-sensor\",\r\n    \"readingAndSendingIntervalTimeInSeconds\": 6400,\r\n    \"threshold\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/albums/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"albums",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Sep 2021 11:20:43 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"1\",\n    \"title\": \"Blue Train\",\n    \"artist\": \"John Coltrane\",\n    \"price\": 56.99\n}"
+				}
+			]
+		},
+		{
+			"name": "Get albums",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/albums",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"albums"
+					]
+				},
+				"description": "Retrive all albums"
+			},
+			"response": []
+		},
+		{
+			"name": "Add album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"4\",\r\n    \"title\": \"test\",\r\n    \"artist\": \"test artist\",\r\n    \"price\": 49.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/albums",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"albums"
+					]
+				},
+				"description": "Add single instance of an album to database"
+			},
+			"response": []
+		}
+	]
+}
